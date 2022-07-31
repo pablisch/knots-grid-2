@@ -1,62 +1,86 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;800;900&display=swap');
+
+:root {
+  --navbar: #5b6c65;
+  --navText: #e1ede8;
+}
+
 * {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
   
-  body {
-    background-image: url('images/ropeBackground2'); 
-    background-attachment: fixed;
-    background-size: cover; 
-    padding: 20px;
-    font-family: Arial;
-  }
-
-  a:link { text-decoration: none; }
-  a:visited { text-decoration: none; }
-  a:hover { text-decoration: none; }
-  a:active { text-decoration: none; }
-
-  .header {
-    background-color: rgba(217, 210, 196, 0.3);
-    padding: 1px;
-    color: rgb(135, 127, 111);
-    margin: 0px;
-    text-align: center;
-    font-size: 2.3vw;    
+body {
+  background-image: url('images/ropeBackground2'); 
+  background-attachment: fixed;
+  background-size: cover; 
+  font-family: 'Raleway', sans-serif;
 }
-.subheading {
-  background-color: rgba(217, 210, 196, 0.5);
-  padding: 1px;
-  color: rgb(135, 127, 111);
-  margin: 0px;
-  text-align: center;
-  font-size: 1.5vw;  
+
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
+
+nav {
+  background-color: var(--navbar);
+  color: var(--navText);
+  margin-bottom: 20px;
 }
-#navbar {
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 90vw;
+  margin: 0 auto;
+  padding: 0 30px;
   overflow: hidden;
-  background-color: hsla(45, 13%, 38%, 0.95);
-  z-index: 1500;
+  height: 65px;
 }
-#navbar a {
-  display: block;
-  color: rgb(255, 255, 255);
+
+.logo {
+  display: flex;
+  align-items: center;
+  height: inherit;
+}
+
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+nav li {
+  margin-left: 25px;
   text-align: center;
-  padding: 14px;
+}
+
+nav a {
   text-decoration: none;
-  float: left;
+  color: var(--navText);
+  cursor: pointer;
 }
-#navbar a:hover {
-  background-color: #f2ede4;
-  color: rgb(70, 65, 50);
+
+nav a:hover {
+  color: #9ecb7c;
 }
-/* The sticky class is added to the navbar with JS when it reaches its scroll position */
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
+
+nav h1 {
+  font-size: 2.4rem;
+  font-weight: bold;
 }
-/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + .content {
-  padding-top: 200px;
+
+nav li {
+  font-weight: bold;
+}
+
+nav img {
+  max-width: 45px;
+  max-height: 45px;
+  margin-right: 15px;
 }
 
 .container {
@@ -71,18 +95,15 @@
   margin: auto;
 }
 
-h1 {
-  font-size: 50px;
-  word-break: break-all;
-  color: hsla(47, 12%, 29%, 0.8);
-}
-h2 {
-  text-align: left;
-  color: hsla(47, 12%, 29%, 0.8);
-}
-h3 {
+h1, h2, h3 {
+  color: var(--navbar);
   text-align: center;
-  color: hsla(47, 12%, 29%, 0.8);
+}
+
+section {
+  max-width: 90vw;
+  margin: 0 auto;
+  padding: 0 30px;
 }
 
 .grid-container {
